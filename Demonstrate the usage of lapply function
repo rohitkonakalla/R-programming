@@ -1,0 +1,3 @@
+movies <- c("SPYDERMAN","BATMAN","VERTIGO","CHINATOWN")
+movies_lower <-lapply(movies, tolower)
+str(movies_lower)
