@@ -1,0 +1,4 @@
+M <- matrix(1:6, nrow = 2)
+print(M)
+t <- t(M)
+print(t)
