@@ -1,0 +1,5 @@
+name<-readline(prompt="sai")
+ age<-readline(prompt="22")
+paste("hai",name,"sai",age,"23 years old")
+class(name)
+class(age)
