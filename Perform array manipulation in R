@@ -1,0 +1,10 @@
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 6, 8, 0, 2, 4)
+array1 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+vector3 <- c(3, 2, 1)
+vector4 <- c(2, 4, 6, 8, 3, 5)
+array2 <- array(c(vector3, vector4), dim = c(3, 3, 2))
+matrix1 <- array1[,,2]
+matrix2 <- array2[,,2]
+result <- matrix1 + matrix2
+print(result)
