@@ -1,0 +1,6 @@
+vector1 <- c(3, 2, 1)
+vector2 <- c(2, 4, 6, 8, 0, 1)
+new.array <- array(c(vector1, vector2), dim = c(3, 3, 2))
+print(new.array)
+result <- apply(new.array, c(1), sum)
+print(result)
