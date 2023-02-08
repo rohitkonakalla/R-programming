@@ -1,0 +1,5 @@
+B = matrix(c(1, 2), nrow = 1, ncol = 2)
+C = matrix(c(3, 4, 5), nrow = 1, ncol = 3)
+print(B)
+print(C)
+print (cbind(B, C))
