@@ -1,0 +1,8 @@
+ head(cast(molted,Month+Day~variable))
+ Month Day Ozone Solar.R Wind Temp
+1 5 1 41 190 7.4 67
+2 5 2 36 118 8.0 72
+3 5 3 12 149 12.6 74
+4 5 4 18 313 11.5 62
+5 5 5 NA NA 14.3 56
+6 5 6 28 NA 14.9 66
