@@ -1,0 +1,1 @@
+cast(molted,variable~Month,fun.aggregate=c(mean,sum))
