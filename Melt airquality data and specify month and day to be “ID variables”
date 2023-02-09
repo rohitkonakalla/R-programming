@@ -1,0 +1,3 @@
+molted = 
+melt(airquality,id.vars=c("Month","Day"),measured.vars=c("Ozone","Solar.R","Wind","Temp"))
+str(molted)
