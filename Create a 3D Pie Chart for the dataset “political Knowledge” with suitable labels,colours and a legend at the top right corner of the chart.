@@ -1,0 +1,9 @@
+library(plotly)
+data <- c(21, 62, 10, 53)
+labels <- c("London", "New York", "Singapore", "Mumbai")
+plot_ly(labels = labels, values = data, type = 'pie', hole = 0.4) %>%
+add_trace(textposition = 'inside',
+ textinfo = 'percent+label') %>%
+ layout(title = "Political Knowledge Pie Chart",
+ showlegend = TRUE,
+ legend = list(x = 1, y = 1))
