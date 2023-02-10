@@ -1,0 +1,7 @@
+# Load the built-in dataset of heights and weights for women
+data("women")
+# Create a factor based on the height of women
+women$height_factor = cut(women$height, breaks = c(58, 60, 62, 64), labels = c("Short", 
+"Medium", "Tall"))
+# Print the result
+print(women)
