@@ -1,0 +1,15 @@
+data(mpg)
+cty <- mpg$cty
+max_cty <- max(cty)
+max_cty_car <- mpg[which.max(cty), c("manufacturer", "model")]
+cat("The car with the maximum city miles per gallon is:", max_cty_car$manufacturer, 
+max_cty_car$model, "\n")
+compact_subcompact <- mpg[mpg$class %in% c("compact", "subcompact"), ]
+disp <- compact_subcompact$disp
+min_disp <- min(disp)
+min_disp_cars <- compact_subcompact[which(compact_subcompact$disp == min_disp), 
+c("manufacturer", "model")]
+cat("The cars with the minimum displacement in the compact and subcompact class are:")
+for (i in 1:nrow(min_disp_cars)) {
+ cat("\n", min_disp_cars[i, 1], min_disp_cars[i, 2])
+}
