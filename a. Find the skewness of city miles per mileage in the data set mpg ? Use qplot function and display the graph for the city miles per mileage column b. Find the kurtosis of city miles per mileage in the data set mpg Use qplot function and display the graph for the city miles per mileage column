@@ -1,0 +1,9 @@
+data(mpg)
+cty <- mpg$cty
+cty_skewness <- skewness(cty)
+cat("The skewness of the city miles per gallon column is:", cty_skewness, "\n")
+cty_kurtosis <- kurtosis(cty)
+cat("The kurtosis of the city miles per gallon column is:", cty_kurtosis, "\n")
+library(ggplot2)
+qplot(cty, geom = "histogram", main = "Histogram of City Miles per Gallon", xlab = "City Miles 
+per Gallon")
