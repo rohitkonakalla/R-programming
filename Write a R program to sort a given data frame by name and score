@@ -1,0 +1,2 @@
+sorted_exam_data = exam_data %>% arrange(name, score)
+print(sorted_exam_data)
