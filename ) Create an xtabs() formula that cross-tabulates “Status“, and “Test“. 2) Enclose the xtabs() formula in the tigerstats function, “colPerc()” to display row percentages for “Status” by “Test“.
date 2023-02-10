@@ -1,0 +1,4 @@
+cross_tab <- xtabs(~Status + Test, data=dataframe1)
+library(tigerstats)
+col_percentages <- colPerc(cross_tab)
+col_percentages
