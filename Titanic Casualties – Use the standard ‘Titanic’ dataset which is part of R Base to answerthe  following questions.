@@ -1,0 +1,11 @@
+# Load Titanic dataset
+data("Titanic")
+# (i) Sum of males vs females aboard
+titanic_gender_sum<- with(Titanic, tapply(Freq, Sex, sum))
+print(titanic_gender_sum)
+# (ii) Sum of survivors vs sex
+titanic_survived_sum<- with(Titanic, tapply(Freq, list(Sex, Survived), sum))
+print(titanic_survived_sum)
+# (iii) Sum of passengers by sex vs age
+titanic_age_sum<- with(Titanic, tapply(Freq, list(Sex, Age), sum))
+print(titanic_age_sum)
