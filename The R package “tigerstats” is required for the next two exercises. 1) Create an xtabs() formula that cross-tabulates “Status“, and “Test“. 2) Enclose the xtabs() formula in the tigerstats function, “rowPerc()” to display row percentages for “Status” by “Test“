@@ -1,0 +1,5 @@
+install.packages("tigerstats")
+library(tigerstats)
+xtab_table <- xtabs(~Status + Test, data = dataframe1)
+row_perc <- rowPerc(xtab_table)
+print(row_perc)
