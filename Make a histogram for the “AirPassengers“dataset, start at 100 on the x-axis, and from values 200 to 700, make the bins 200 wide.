@@ -1,0 +1,6 @@
+library(datasets)
+data("AirPassengers")
+hist(AirPassengers, xlim = c(100, 700), breaks = seq(200, 700, by = 200))
+title("AirPassengers Histogram")
+xlab("Passenger Count")
+ylab("Frequency")
