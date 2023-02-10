@@ -1,0 +1,8 @@
+# Load the required library
+library(dplyr)
+# Create the factor variable from a random sample of the LETTERS variable
+letters_factor = factor(sample(LETTERS, 50))
+# Extract the five levels of the factor variable
+levels_5 = levels(letters_factor)[1:5]
+# Print the result
+print(levels_5)
