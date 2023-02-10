@@ -1,0 +1,30 @@
+# Load the iris dataset
+data("iris")
+# (i) Find dimension, Structure, Summary statistics, Standard Deviation of all features
+dim(iris) # dimensions of the data frame
+str(iris) # structure of the data frame
+summary(iris) # summary statistics of the data frame
+apply(iris[,1:4], 2, sd) # standard deviation of the features
+# (ii) Find mean and standard deviation of features grouped by three species of Iris flowers (Iris 
+setosa, Iris virginica and Iris versicolor)
+group_by_species<- group_by(iris, Species)
+summarize(group_by_species, mean = mean(Sepal.Length), sd = sd(Sepal.Length))
+# (iii) Find quantile value of sepal width and length
+quantile(iris$Sepal.Width)
+quantile(iris$Sepal.Length)
+# (iv) Create new data frame named iris1 which have a new column name Sepal.Length.Cate that 
+categorizes “Sepal.Length” by quantile
+quantile_cut<- cut(iris$Sepal.Length, quantile(iris$Sepal.Length), labels = c("Q1", "Q2", "Q3", 
+"Q4"))
+iris1 <- cbind(iris, Sepal.Length.Cate = quantile_cut)
+# (v) Average value of numerical variables by two categorical variables: Species and 
+Sepal.Length.Cate
+group_by_species_cate<- group_by(iris1, Species, Sepal.Length.Cate)
+summarize(group_by_species_cate, Sepal.Width_mean = mean(Sepal.Width), 
+Petal.Length_mean = mean(Petal.Length), Petal.Width_mean = mean(Petal.Width))
+# (vi) Average mean value of numerical variables by Species and Sepal.Length.Cate
+group_by_species_cate_mean<- group_by(iris1, Species, Sepal.Length.Cate) %>%
+summarize_all(mean)
+# (vii) Create Pivot Table based on Species and Sepal.Length.Cate
+pivot_table<- spread(group_by_species_cate_mean, key = Sepal.Length.Cate, value = 
+Sepal.Width)
