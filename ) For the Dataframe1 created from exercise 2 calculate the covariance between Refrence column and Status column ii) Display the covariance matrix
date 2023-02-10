@@ -1,0 +1,4 @@
+covariance <- cov(dataframe1$Reference, dataframe1$Status)
+covariance
+covariance_matrix <- cov(dataframe1)
+covariance_matrix
