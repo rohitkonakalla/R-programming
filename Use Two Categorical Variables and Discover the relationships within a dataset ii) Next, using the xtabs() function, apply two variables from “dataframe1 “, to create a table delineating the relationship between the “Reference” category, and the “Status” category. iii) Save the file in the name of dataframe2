@@ -1,0 +1,4 @@
+library(gmodels)
+xtab_table <- xtabs(~Reference + Status, data = dataframe1)
+print(xtab_table)
+dataframe2 <- as.data.frame.table(xtab_table)
