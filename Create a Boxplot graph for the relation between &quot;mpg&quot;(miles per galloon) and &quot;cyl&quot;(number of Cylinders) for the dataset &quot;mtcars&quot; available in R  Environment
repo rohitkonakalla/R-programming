@@ -1,0 +1,3 @@
+data("mtcars")
+boxplot(mtcars$mpg ~ mtcars$cyl, main = "Boxplot of mpg vs cyl", xlab = "Number of 
+Cylinders", ylab = "Miles per Gallon")
