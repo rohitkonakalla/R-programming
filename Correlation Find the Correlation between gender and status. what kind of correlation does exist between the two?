@@ -1,0 +1,2 @@
+correlation <- cor(dataframe1$Gender, dataframe1$Status)
+correlation
