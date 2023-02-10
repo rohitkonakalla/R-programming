@@ -1,0 +1,7 @@
+data(mpg)
+cty <- mpg$cty
+cty_sd <- sd(cty)
+cat("The standard deviation of city miles per gallon is:", cty_sd, "\n")
+hwy <- mpg$hwy
+hwy_var <- var(hwy)
+cat("The variance of highway miles per gallon is:", hwy_var, "\n")
