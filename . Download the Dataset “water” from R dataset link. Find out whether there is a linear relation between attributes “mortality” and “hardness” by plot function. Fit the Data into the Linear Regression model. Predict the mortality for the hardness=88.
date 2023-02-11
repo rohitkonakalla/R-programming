@@ -1,0 +1,9 @@
+dataset<-read.csv("water.csv")
+View(data)
+plot(dataset$mortality, dataset$hardness, col="RED", main=  "Linear Regression" , 
+      xlab = "mortality", ylab= "hardness")
+rel<-lm(mortality~hardness,data = dataset)
+
+A<- data.frame(hardness=88)
+Res<- predict(rel, A)
+print(Res)
